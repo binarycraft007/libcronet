@@ -6,7 +6,7 @@ if [ "$have_version" = "$want_version" ]; then
   exit 0
 fi
 name="chromium-$want_version"
-tarball="$name.tar.xz"
+tarball="$name-lite.tar.xz"
 url="https://commondatastorage.googleapis.com/chromium-browser-official/$tarball"
 root=$(git rev-list --max-parents=0 HEAD)
 branch=$(git branch --show-current)

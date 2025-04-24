@@ -19,13 +19,15 @@
 ^buildtools/third_party/libc++abi/cxa_demangle_stub.cc
 ^buildtools/third_party/libunwind/BUILD.gn
 ^chrome/VERSION
-^chrome/android/profiles/newest.txt
 ^chrome/app/theme/chromium/BRANDING
 ^chrome/build/*.txt
 ^chrome/version.gni
 ^components/miracle_parameter
 ^components/nacl/toolchain.gni
 ^components/network_time
+^components/cronet
+^components/grpc_support
+^components/prefs
 ^components/version_info
 ^crypto
 ^ios/features.gni

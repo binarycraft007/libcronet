@@ -2166,23 +2166,21 @@ component("base") {
       "process/set_process_title_linux.h",
       "system/sys_info_linux.cc",
     ]
-    if (!is_cronet_build) {
-      # These dependencies are not required on Android.
-      sources += [
-        "nix/mime_util_xdg.cc",
-        "nix/mime_util_xdg.h",
-        "nix/scoped_xdg_activation_token_injector.cc",
-        "nix/scoped_xdg_activation_token_injector.h",
-        "nix/xdg_util.cc",
-        "nix/xdg_util.h",
-      ]
-      defines += [ "USE_SYMBOLIZE" ]
-      deps += [
-        ":dwarf_helpers",
-        "//base/third_party/symbolize",
-        "//base/third_party/xdg_user_dirs",
-      ]
-    }
+    # These dependencies are not required on Android.
+    sources += [
+      "nix/mime_util_xdg.cc",
+      "nix/mime_util_xdg.h",
+      "nix/scoped_xdg_activation_token_injector.cc",
+      "nix/scoped_xdg_activation_token_injector.h",
+      "nix/xdg_util.cc",
+      "nix/xdg_util.h",
+    ]
+    defines += [ "USE_SYMBOLIZE" ]
+    deps += [
+      ":dwarf_helpers",
+      "//base/third_party/symbolize",
+      "//base/third_party/xdg_user_dirs",
+    ]
   } else {
     if (!is_android) {
       sources -= [
